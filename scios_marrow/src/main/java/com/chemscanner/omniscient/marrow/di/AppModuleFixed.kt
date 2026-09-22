@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.chemscanner.omniscient.marrow.data.AppDatabase
 import com.chemscanner.omniscient.marrow.data.CacheDao
 import com.chemscanner.omniscient.marrow.data.ResponseCacheManager
+import com.chemscanner.omniscient.marrow.config.ApiKeyProvider
 import com.chemscanner.omniscient.marrow.ml.GemmaLocalEngine
 import com.chemscanner.omniscient.marrow.ml.MistralFallbackEngine
 import com.chemscanner.omniscient.marrow.services.AppleWatchBCIService
@@ -98,8 +99,11 @@ object AppModuleFixed {
     
     @Singleton
     @Provides
-    fun provideMistralFallbackEngine(okHttpClient: OkHttpClient): MistralFallbackEngine =
-        MistralFallbackEngine(okHttpClient).also {
+    fun provideMistralFallbackEngine(
+        okHttpClient: OkHttpClient,
+        apiKeyProvider: ApiKeyProvider
+    ): MistralFallbackEngine =
+        MistralFallbackEngine(okHttpClient, apiKeyProvider).also {
             Timber.d("MISTRAL: Fallback engine initialized")
         }
     
@@ -120,5 +124,5 @@ object AppModuleFixed {
     
     @Singleton
     @Provides
-    fun provideApiKeyProvider(): ApiKeyProvider = ApiKeyProvider()
+    fun provideApiKeyProvider(): ApiKeyProvider = ApiKeyProvider
 }
