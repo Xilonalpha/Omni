@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f6f8"
+    tools:context=".ui.MainActivity">
+
+    <!-- Titlu Dashboard -->
+    <TextView
+        android:id="@+id/dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:text="@string/dashboard_title"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#212121" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dashboard_title"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="16dp">
+
+        <GridLayout
+            android:id="@+id/main_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:columnCount="2">
+
+            <!-- Card Scanner -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnScanner"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_scanner" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/card_scanner" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card History -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnHistory"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_history" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/card_history" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card Virtual Lab -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnVirtualLab"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_lab" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/card_virtual_lab" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card Green Chemistry -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnGreenChemistry"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_lab" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/card_green_chemistry" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card Periodic Table -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnPeriodicTable"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_periodic_table" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Periodic Table" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card Quiz -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnQuiz"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_ai" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Chemistry Quiz" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card AR Viewer -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnAr"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_chemical_logo" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/card_ar_viewer" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card AI Assistant -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnAiAssistant"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_ai" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/card_ai_assistant" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card NeuroPhys -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnNeuroPhys"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_ai" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="NeuroPhys Link" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card AstroMech -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnAstroMech"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_lab" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="AstroMech Weaver" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card RoboPhys -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnRoboPhys"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_scanner" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="RoboPhys Builder" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card TemporalPhysics -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnTemporalPhysics"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_refresh" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="TemporalPhysics" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card MicroVerse -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnMicroVerse"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_scanner" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="MicroVerse Explorer" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card NeuroBio (NEW) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnNeuroBio"
+                style="@style/CardStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_columnSpan="2"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_ai" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="NeuroBio Weaver (Brain Design)" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+    </ScrollView>
+
+    <!-- Bara de jos: Settings + Logout -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSettings"
+            style="@style/Widget.MaterialComponents.Button.TextButton.IconOnly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_settings"
+            app:icon="@drawable/ic_settings"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.IconOnly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_logout"
+            app:icon="@drawable/ic_logout"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>

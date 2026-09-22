@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- New App Theme Colors -->
+    <color name="colorPrimary">#00796B</color> <!-- Teal -->
+    <color name="colorPrimaryDark">#004D40</color> <!-- Dark Teal -->
+    <color name="colorAccent">#40C4FF</color> <!-- Light Blue -->
+
+    <!-- Secondary Color -->
+    <color name="colorSecondary">#0091EA</color> <!-- Blue -->
+
+    <!-- Standard Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Confidence Levels -->
+    <color name="confidence_high">#4CAF50</color> <!-- Green -->
+    <color name="confidence_medium">#FFC107</color> <!-- Amber -->
+    <color name="confidence_low">#F44336</color> <!-- Red -->
+
+    <!-- Chat Bubbles -->
+    <color name="chat_bubble_ai">#E0F7FA</color> <!-- Light Cyan -->
+    <color name="chat_bubble_user">#DCEDC8</color> <!-- Light Green -->
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#FFFFFF</color>
+    <color name="ar_background">#000000</color>
+
+    <!-- Deprecated colors (can be removed later) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+</resources>

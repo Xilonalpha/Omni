@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Omniscient Scanner</string>
+
+    <!-- Camera Permission Dialog -->
+    <string name="camera_permission_title">إذن الكاميرا مطلوب</string>
+    <string name="camera_permission_message">يحتاج هذا التطبيق إلى إذن الكاميرا لمسح الهياكل الكيميائية.</string>
+    <string name="camera_permission_grant">منح</string>
+    <string name="camera_permission_cancel">إلغاء</string>
+
+    <!-- Logout Message -->
+    <string name="logout_message">لقد تم تسجيل خروجك.</string>
+
+    <!-- Main Dashboard -->
+    <string name="dashboard_title">لوحة التحكم</string>
+    <string name="card_scanner">ماسح ضوئي</string>
+    <string name="card_history">السجل</string>
+    <string name="card_virtual_lab">مختبر افتراضي</string>
+    <string name="card_green_chemistry">الكيمياء الخضراء</string>
+    <string name="card_ai_assistant">مساعد الذكاء الاصطناعي</string>
+    <string name="card_ar_viewer">عارض الواقع المعزز</string>
+    <string name="button_settings">إعدادات</string>
+    <string name="button_logout">تسجيل الخروج</string>
+
+    <!-- AI Assistant -->
+    <string name="ai_assistant_welcome_message">أهلاً! أنا مساعد الكيمياء الخاص بك. اسألني أي شيء عن الكيمياء!</string>
+    <string name="ai_assistant_title">مساعد الكيمياء بالذكاء الاصطناعي</string>
+    <string name="ai_assistant_back_description">عودة</string>
+    <string name="ai_assistant_clear_chat_description">مسح الدردشة</string>
+    <string name="ai_assistant_info_description">معلومات</string>
+    <string name="ai_assistant_thinking">الذكاء الاصطناعي يفكر…</string>
+    <string name="ai_assistant_placeholder">اسأل عن الكيمياء…</string>
+    <string name="ai_assistant_clear_input_description">مسح</string>
+    <string name="ai_assistant_send_description">إرسال</string>
+    <string name="ai_assistant_sender_name">مساعد الكيمياء بالذكاء الاصطناعي</string>
+    <string name="ai_assistant_error_label">خطأ</string>
+    <string name="ai_assistant_try_asking_label">جرب أن تسأل:</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_save_scans">حفظ عمليات المسح في السجل تلقائيًا</string>
+    <string name="settings_select_language">اختار اللغة</string>
+
+    <!-- Login Screen -->
+    <string name="login_subtitle">ChemScanner Omniscient</string>
+    <string name="login_email_hint">البريد الإلكتروني</string>
+    <string name="login_password_hint">كلمه السر</string>
+    <string name="login_button">تسجيل الدخول</string>
+    <string name="login_register_prompt">ليس لديك حساب؟ سجل</string>
+    <string name="login_forgot_password">هل نسيت كلمة المرور؟</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">إنشاء حساب</string>
+    <string name="register_confirm_password_hint">تأكيد كلمة المرور</string>
+    <string name="register_button">تسجيل</string>
+
+    <!-- History Screen -->
+    <string name="history_empty">السجل فارغ</string>
+
+    <!-- History Detail Screen -->
+    <string name="detail_speak_button_description">نطق التفاصيل الكيميائية</string>
+    <string name="detail_view_3d_button">عرض نموذج ثلاثي الأبعاد</string>
+    <string name="detail_sustainability_score_label">درجة الاستدامة:</string>
+    <string name="detail_green_alternatives_label">البدائل الخضراء:</string>
+
+    <!-- Virtual Lab Screen -->
+    <string name="lab_reactant1_hint">المادة المتفاعلة 1 (على سبيل المثال، HCl)</string>
+    <string name="lab_reactant2_hint">المادة المتفاعلة 2 (على سبيل المثال، NaOH)</string>
+    <string name="lab_simulate_button">محاكاة التفاعل</string>
+    <string name="lab_result_label">النتيجة:</string>
+    <string name="lab_speak_button_description">نطق نتيجة المحاكاة</string>
+
+    <!-- Green Chemistry Screen -->
+    <string name="green_chem_title">تحليل الكيمياء الخضراء</string>
+    <string name="green_chem_enter_name_label">أدخل الاسم الكيميائي</string>
+    <string name="green_chem_analyze_button">تحليل الاستدامة</string>
+    <string name="green_chem_error">خطأ: %1$s</string>
+    <string name="green_chem_analysis_for">تحليل ل: %1$s</string>
+    <string name="green_chem_score_label">درجة الاستدامة: %.2f / 100</string>
+    <string name="green_chem_alternatives_title">البدائل الخضراء المقترحة</string>
+    <string name="green_chem_no_alternatives">تعذر إنشاء بدائل خضراء في هذا الوقت.</string>
+    <string name="green_chem_unknown_name">اسم غير معروف</string>
+    <string name="green_chem_no_justification">لم يتم تقديم أي مبرر.</string>
+
+    <!-- AR Screen -->
+    <string name="ar_no_molecule_data">لا توجد بيانات جزيء لعرضها</string>
+    <string name="ar_model_load_error">تعذر تحميل بيانات النموذج ثلاثي الأبعاد</string>
+    <string name="ar_no_smiles_error">ترميز SMILES غير متوفر لنموذج AR.</string>
+
+    <!-- Password Reset -->
+    <string name="forgot_password_dialog_title">إعادة تعيين كلمة المرور</string>
+    <string name="forgot_password_dialog_message">أدخل عنوان بريدك الإلكتروني لتلقي رابط إعادة تعيين كلمة المرور.</string>
+    <string name="forgot_password_dialog_send">إرسال</string>
+    <string name="forgot_password_success">تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني.</string>
+    <string name="forgot_password_error">خطأ في إرسال رابط إعادة التعيين: %1$s</string>
+
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalii Chimice"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:id="@+id/textViewChemicalName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Substanță: "
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/textViewScanType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip scanare: "
+        android:textSize="16sp"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informații:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/textViewDetails"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:text="Detaliile despre substanță vor apărea aici..."
+        android:textSize="14sp"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Înapoi"
+        android:layout_gravity="center"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+</LinearLayout>

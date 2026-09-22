@@ -1,0 +1,176 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "7ddccd807ed2bcfbff724fe8d2b68c40",
+    "entities": [
+      {
+        "tableName": "scan_history",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `chemical_name` TEXT NOT NULL, `chemical_formula` TEXT, `confidence_score` REAL NOT NULL, `image_path` TEXT, `scan_date` INTEGER NOT NULL, `molecular_weight` REAL, `cas_number` TEXT, `smiles_notation` TEXT, `iupac_name` TEXT, `sustainability_score` REAL, `green_alternatives` TEXT, `is_favorite` INTEGER NOT NULL, `scan_type` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "chemicalName",
+            "columnName": "chemical_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "chemicalFormula",
+            "columnName": "chemical_formula",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "confidenceScore",
+            "columnName": "confidence_score",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imagePath",
+            "columnName": "image_path",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scanDate",
+            "columnName": "scan_date",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "molecularWeight",
+            "columnName": "molecular_weight",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "casNumber",
+            "columnName": "cas_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "smilesNotation",
+            "columnName": "smiles_notation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "iupacName",
+            "columnName": "iupac_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sustainabilityScore",
+            "columnName": "sustainability_score",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "greenAlternatives",
+            "columnName": "green_alternatives",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isFavorite",
+            "columnName": "is_favorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scanType",
+            "columnName": "scan_type",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "toxicity_data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`casNumber` TEXT NOT NULL, `toxicityScore` REAL NOT NULL, PRIMARY KEY(`casNumber`))",
+        "fields": [
+          {
+            "fieldPath": "casNumber",
+            "columnName": "casNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "toxicityScore",
+            "columnName": "toxicityScore",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "casNumber"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "chemicals",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `formula` TEXT, `cid` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "formula",
+            "columnName": "formula",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cid",
+            "columnName": "cid",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7ddccd807ed2bcfbff724fe8d2b68c40')"
+    ]
+  }
+}

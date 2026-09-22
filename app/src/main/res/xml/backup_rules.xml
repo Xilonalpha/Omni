@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="database" path="omniscient_database" />
+    <include domain="sharedpref" path="OmniscientPrefs.xml" />
+    <include domain="sharedpref" path="language_prefs.xml" />
+    <!-- Exclude system-level preferences that may cause restoration failures -->
+    <exclude domain="sharedpref" path="notification_preferences.xml" />
+</full-backup-content>

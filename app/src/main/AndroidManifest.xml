@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.chemscanner.omniscient">
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.BODY_SENSORS_BACKGROUND" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- FOREGROUND SERVICE PERMISSIONS (API 34+) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- GHOST MESH P2P PERMISSIONS -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" android:usesPermissionFlags="neverForLocation" tools:targetApi="tiramisu" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.ar" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi.direct" android:required="false" />
+
+    <application
+        android:name="com.chemscanner.omniscient.OmniscientApplication"
+        android:allowBackup="false"
+        android:largeHeap="true"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OmniscientScanner"
+        android:usesCleartextTraffic="true"
+        android:extractNativeLibs="true"
+        tools:targetApi="m">
+
+        <meta-data android:name="com.google.ar.core" android:value="optional" />
+
+        <activity android:name="com.chemscanner.omniscient.ui.MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.chemscanner.omniscient.ui.ScannerActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.ScannerPlusActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.AiAssistantActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.HistoryActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.HistoryDetailActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.ARActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.StoichiometryActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.VirtualLabActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.GreenChemistryActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.PeriodicTableActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.QuizActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.BioAgeChronosActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.SpectralEyeActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.MultiverseOracleActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.DarkMatterActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.BioSonicActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.AIConsciousnessActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.GalaxyMigrationActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.ExoPlanetSurveyorActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.HighVelocityLabActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.MeshCityActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.FootballManagerActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.QuantumFootballActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.PlanetScannerActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.GenomicArchitectActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.QuantumHubActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.FusionReactorActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.PaleoScannerActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.NanoForgeActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.AtomicStabilizerActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.BioDigitalSurgeonActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.NeuroModulatorActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.TerraformingActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.NeuroPhysActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.MicroVerseActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.NeuroBioActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.RoboPhysActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.AstroMechActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.TemporalPhysicsActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.CernActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.MarsRoverActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.CelestialControlActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.VeraRubinActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.SettingsActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.XilonProfActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.AbyssalActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.BlackHoleActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.MicroFishActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.PharmaGenomeActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.QuantumColliderActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.WarpDriveActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.EmisarActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.StarlinkActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.VoyagerActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.SovereignMeshActivity" />
+        <activity android:name="com.chemscanner.omniscient.ui.DermalArchitectActivity" />
+
+        <activity android:name="com.chemscanner.omniscient.ui.ChemicalDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.chemscanner.omniscient.ui.CommandCenterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.chemscanner.omniscient.marrow.services.SovereignVpnService"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:exported="true"
+            android:foregroundServiceType="specialUse">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+            <property android:name="android.app.foreground_service_type_special_use_description"
+                android:value="Secure data tunneling and mesh routing for Architect Xilon" />
+        </service>
+
+        <service
+            android:name="com.chemscanner.omniscient.marrow.services.MasterVoiceService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse|microphone">
+            <property android:name="android.app.foreground_service_type_special_use_description" android:value="Voice recognition and biometric sync for Architect Xilon" />
+        </service>
+
+        <service
+            android:name="com.chemscanner.omniscient.marrow.services.NeuralImmunityService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property android:name="android.app.foreground_service_type_special_use_description" android:value="Background neural integrity monitoring" />
+        </service>
+
+        <service
+            android:name="com.chemscanner.omniscient.network.service.ScanForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="camera" />
+
+    </application>
+</manifest>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050A0E"
+    tools:context=".ui.VirtualLabActivity">
+
+    <!-- HUD Elements -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#00FFFF"
+        android:layout_marginTop="60dp"
+        android:alpha="0.3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/lab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:text="VIRTUAL LAB CONSOLE"
+            android:textColor="#00FFFF"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:textSize="22sp" />
+
+        <!-- Input Section with Glass Effect -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6000000"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REAGENT ALPHA"
+                android:textColor="#00FFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/reactant1_input"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Select primary substance..."
+                android:textColorHint="#555555"
+                android:textColor="#FFFFFF"
+                android:background="#1AFFFFFF"
+                android:padding="12dp"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="[ MIXED WITH ]"
+                android:textColor="#444444"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REAGENT BETA"
+                android:textColor="#00FFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/reactant2_input"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Select secondary substance..."
+                android:textColorHint="#555555"
+                android:textColor="#FFFFFF"
+                android:background="#1AFFFFFF"
+                android:padding="12dp"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/simulate_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#00FFFF"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="EXECUTE SIMULATION" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="ANALYSIS REPORT"
+                android:textColor="#00FFFF"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/speak_button_lab"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="#00FFFF"
+                android:src="@android:drawable/ic_media_play" />
+        </RelativeLayout>
+
+        <!-- Result Section -->
+        <ScrollView
+            android:id="@+id/result_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:background="#E6000000"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/simulation_result_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="Simulation ready. Waiting for input parameters..." />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/energy_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="24dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/lab_progress_bar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="#00FFFF"
+        android:visibility="gone" />
+
+</RelativeLayout>

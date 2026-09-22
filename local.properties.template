@@ -1,0 +1,62 @@
+# 🔐 LOCAL.PROPERTIES TEMPLATE - NEVER COMMIT THIS FILE
+# Copy this to local.properties and add your actual API keys
+# Add to .gitignore: local.properties
+
+# NASA API Keys
+nasa.api.key=YOUR_NASA_API_KEY_HERE
+nasa.api.key.backup=YOUR_BACKUP_KEY_HERE
+
+# AI Model APIs
+openai.api.key=YOUR_OPENAI_KEY_HERE
+anthropic.api.key=YOUR_ANTHROPIC_KEY_HERE
+gemini.api.key=YOUR_GOOGLE_GEMINI_KEY_HERE
+grok.api.key=YOUR_GROK_X_AI_KEY_HERE
+deepseek.api.key=YOUR_DEEPSEEK_KEY_HERE
+mistral.api.key=YOUR_MISTRAL_KEY_HERE
+nvidia.api.key=YOUR_NVIDIA_KEY_HERE
+
+# Astronomy & Space APIs
+jwst.api.key=YOUR_JWST_KEY_HERE
+esa.api.key=YOUR_ESA_KEY_HERE
+copernicus.api.key=YOUR_COPERNICUS_KEY_HERE
+
+# Database
+firebase.project_id=YOUR_FIREBASE_PROJECT_ID
+firebase.database_url=YOUR_FIREBASE_DATABASE_URL
+
+# Google Services
+google.maps.api.key=YOUR_GOOGLE_MAPS_KEY_HERE
+google.places.api.key=YOUR_GOOGLE_PLACES_KEY_HERE
+
+# Security & Auth
+keystore.path=./keystore.jks
+keystore.password=YOUR_KEYSTORE_PASSWORD
+key.alias=YOUR_KEY_ALIAS
+key.password=YOUR_KEY_PASSWORD
+
+# Build Configuration
+build.version.name=2.1.REPAIRED
+build.version.code=210
+
+# Signing
+android.signingConfig.storeFile=./keystore.jks
+android.signingConfig.storePassword=YOUR_PASSWORD
+android.signingConfig.keyAlias=YOUR_ALIAS
+android.signingConfig.keyPassword=YOUR_PASSWORD
+
+# Feature Flags
+feature.offline.ai.enabled=true
+feature.real.time.biometrics.enabled=true
+feature.ar.visualization.enabled=true
+feature.api.fallback.chain.enabled=true
+
+# Debugging
+debug.logging.enabled=false
+debug.network.logging.enabled=false
+debug.verbose.output.enabled=false
+
+# Compliance
+compliance.hipaa.enabled=true
+compliance.gdpr.enabled=true
+compliance.encryption.enabled=true
+

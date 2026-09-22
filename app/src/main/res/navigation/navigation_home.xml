@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_home"
+    app:startDestination="@id/navigation_home_dest">
+
+    <fragment
+        android:id="@+id/navigation_home_dest"
+        android:name="com.chemscanner.omniscient.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_dest_to_navigation_scanner_dest"
+            app:destination="@id/navigation_scanner_dest" />
+        <action
+            android:id="@+id/action_navigation_home_dest_to_navigation_history_dest"
+            app:destination="@id/navigation_history_dest" />
+        <action
+            android:id="@+id/action_navigation_home_dest_to_navigation_settings_dest"
+            app:destination="@id/navigation_settings_dest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_scanner_dest"
+        android:name="com.chemscanner.omniscient.ui.scanner.ScannerFragment"
+        android:label="Scanner"
+        tools:layout="@layout/fragment_scanner" />
+
+    <fragment
+        android:id="@+id/navigation_history_dest"
+        android:name="com.chemscanner.omniscient.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/navigation_settings_dest"
+        android:name="com.chemscanner.omniscient.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

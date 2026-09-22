@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Omniscient Scanner</string>
+
+    <!-- Camera Permission Dialog -->
+    <string name="camera_permission_title">Permesso Fotocamera Richiesto</string>
+    <string name="camera_permission_message">Questa applicazione necessita del permesso per la fotocamera per scansionare le strutture chimiche.</string>
+    <string name="camera_permission_grant">Concedi</string>
+    <string name="camera_permission_cancel">Annulla</string>
+
+    <!-- Logout Message -->
+    <string name="logout_message">Sei stato disconnesso.</string>
+
+    <!-- Main Dashboard -->
+    <string name="dashboard_title">Pannello</string>
+    <string name="card_scanner">Scanner</string>
+    <string name="card_history">Cronologia</string>
+    <string name="card_virtual_lab">Laboratorio Virtuale</string>
+    <string name="card_green_chemistry">Chimica Verde</string>
+    <string name="card_ai_assistant">Assistente AI</string>
+    <string name="card_ar_viewer">Visore AR</string>
+    <string name="button_settings">Impostazioni</string>
+    <string name="button_logout">Disconnetti</string>
+
+    <!-- AI Assistant -->
+    <string name="ai_assistant_welcome_message">Ciao! Sono il tuo Assistente AI di Chimica. Chiedimi qualsiasi cosa sulla chimica!</string>
+    <string name="ai_assistant_title">Assistente AI di Chimica</string>
+    <string name="ai_assistant_back_description">Indietro</string>
+    <string name="ai_assistant_clear_chat_description">Svuota Chat</string>
+    <string name="ai_assistant_info_description">Info</string>
+    <string name="ai_assistant_thinking">L\'AI sta pensando…</string>
+    <string name="ai_assistant_placeholder">Chiedi sulla chimica…</string>
+    <string name="ai_assistant_clear_input_description">Svuota</string>
+    <string name="ai_assistant_send_description">Invia</string>
+    <string name="ai_assistant_sender_name">Assistente AI Chimica</string>
+    <string name="ai_assistant_error_label">Errore</string>
+    <string name="ai_assistant_try_asking_label">Prova a chiedere:</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_save_scans">Salva automaticamente le scansioni nella cronologia</string>
+    <string name="settings_select_language">Seleziona Lingua</string>
+
+    <!-- Login Screen -->
+    <string name="login_subtitle">ChemScanner Omniscient</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button">Accedi</string>
+    <string name="login_register_prompt">Non hai un account? Registrati</string>
+    <string name="login_forgot_password">Password dimenticata?</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">Crea Account</string>
+    <string name="register_confirm_password_hint">Conferma Password</string>
+    <string name="register_button">Registrati</string>
+
+    <!-- History Screen -->
+    <string name="history_empty">La cronologia è vuota</string>
+
+    <!-- History Detail Screen -->
+    <string name="detail_speak_button_description">Leggi i dettagli chimici</string>
+    <string name="detail_view_3d_button">Vedi Modello 3D</string>
+    <string name="detail_sustainability_score_label">Punteggio di Sostenibilità:</string>
+    <string name="detail_green_alternatives_label">Alternative Ecologiche:</string>
+
+    <!-- Virtual Lab Screen -->
+    <string name="lab_reactant1_hint">Reagente 1 (es. HCl)</string>
+    <string name="lab_reactant2_hint">Reagente 2 (es. NaOH)</string>
+    <string name="lab_simulate_button">Simula Reazione</string>
+    <string name="lab_result_label">Risultato:</string>
+    <string name="lab_speak_button_description">Leggi il risultato della simulazione</string>
+
+    <!-- Green Chemistry Screen -->
+    <string name="green_chem_title">Analisi della Chimica Verde</string>
+    <string name="green_chem_enter_name_label">Inserisci Nome Chimico</string>
+    <string name="green_chem_analyze_button">Analizza Sostenibilità</string>
+    <string name="green_chem_error">Errore: %1$s</string>
+    <string name="green_chem_analysis_for">Analisi per: %1$s</string>
+    <string name="green_chem_score_label">Punteggio di Sostenibilità: %.2f / 100</string>
+    <string name="green_chem_alternatives_title">Alternative Ecologiche Suggerite</string>
+    <string name="green_chem_no_alternatives">Nessuna alternativa ecologica può essere generata in questo momento.</string>
+    <string name="green_chem_unknown_name">Nome Sconosciuto</string>
+    <string name="green_chem_no_justification">Nessuna giustificazione fornita.</string>
+
+    <!-- AR Screen -->
+    <string name="ar_no_molecule_data">Nessun dato molecolare da visualizzare</string>
+    <string name="ar_model_load_error">Impossibile caricare i dati del modello 3D</string>
+    <string name="ar_no_smiles_error">Notazione SMILES non disponibile per il modello AR.</string>
+
+    <!-- Password Reset -->
+    <string name="forgot_password_dialog_title">Resetta Password</string>
+    <string name="forgot_password_dialog_message">Inserisci il tuo indirizzo email per ricevere un link per il reset della password.</string>
+    <string name="forgot_password_dialog_send">Invia</string>
+    <string name="forgot_password_success">Link per il reset della password inviato alla tua email.</string>
+    <string name="forgot_password_error">Errore nell\'invio del link di reset: %1$s</string>
+
+</resources>

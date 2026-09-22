@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">OmniscientScanner</string>
+    <string name="ai_assistant_title">Asistent AI</string>
+    <string name="ai_assistant_back_description">Înapoi</string>
+    <string name="ai_assistant_clear_chat_description">Șterge Chat</string>
+    <string name="ai_assistant_info_description">Informații</string>
+    <string name="ai_assistant_thinking">Se gândește...</string>
+    <string name="ai_assistant_placeholder">Scrie un mesaj...</string>
+    <string name="ai_assistant_clear_input_description">Șterge</string>
+    <string name="ai_assistant_send_description">Trimite</string>
+    <string name="ai_assistant_sender_name">AI</string>
+    <string name="ai_assistant_error_label">Eroare</string>
+    <string name="ai_assistant_try_asking_label">Încearcă să întrebi:</string>
+    <string name="health_profile_title">Profil de Sănătate</string>
+    <string name="health_profile_disclaimer">Informațiile sunt stocate local și nu sunt partajate. Ajută la identificarea alergenilor.</string>
+    <string name="health_profile_add_allergy_label">Adaugă o alergie</string>
+    <string name="health_profile_add_allergy_description">Adaugă</string>
+    <string name="health_profile_allergies_list_title">Alergiile Tale</string>
+    <string name="health_profile_remove_allergy_description">Elimină %1$s</string>
+    <string name="ar_no_molecule_data">Nu s-au găsit date despre moleculă.</string>
+    <string name="ar_model_load_error">Eroare la încărcarea modelului 3D.</string>
+    <string name="experiments_title">Experimente</string>
+    <string name="experiment_details_title">Detalii Experiment</string>
+    <string name="materials_needed_title">Materiale Necesare</string>
+    <string name="start_experiment_button">Începe Experimentul</string>
+    <string name="start_ar_experiment_button">Începe Demo AR</string>
+    <string name="ai_assistant_welcome_message">Salut! Sunt asistentul tău STEM. Cu ce te pot ajuta?</string>
+
+    <!-- Module Noi -->
+    <string name="card_neuro_phys">NeuroPhys Link</string>
+    <string name="card_astro_mech">AstroMech Weaver</string>
+    <string name="card_robo_phys">RoboPhys Builder</string>
+    <string name="card_temporal_physics">TemporalPhysics AR</string>
+    <string name="card_micro_verse">MicroVerse Explorer</string>
+    <string name="card_neuro_bio">NeuroBio Weaver</string>
+    <string name="card_quiz">Quiz de Chimie</string>
+
+    <string name="button_logout">Deconectare</string>
+    <string name="button_settings">Setări</string>
+    <string name="dashboard_title">Panou de Control</string>
+    <string name="card_scanner">Scanner AI</string>
+    <string name="card_history">Istoric Scans</string>
+    <string name="card_virtual_lab">Laborator Virtual</string>
+    <string name="card_green_chemistry">Chimia Verde</string>
+    <string name="card_ar_viewer">Vizualizator AR</string>
+
+    <string name="logout_message">Te-ai deconectat cu succes.</string>
+    <string name="settings_select_language">Selectează Limba</string>
+    <string name="settings_save_scans">Salvează în Istoric</string>
+
+    <!-- Quiz -->
+    <string name="quiz_finished">Quiz Finalizat!</string>
+    <string name="quiz_score">Scorul Tău:</string>
+    <string name="quiz_restart">Reîncepe Quiz</string>
+    <string name="quiz_back_dashboard">Înapoi la Dashboard</string>
+
+    <!-- Physics & Bio specific -->
+    <string name="physics_gravity_label">Gravitație:</string>
+    <string name="physics_time_scale">Scală Temporală:</string>
+    <string name="bio_zoom_label">Mărire:</string>
+    <string name="bio_pathogen_warning">Atenție: Infecție Detectată!</string>
+    <string name="robo_stability_stable">Design Stabil</string>
+    <string name="robo_stability_unstable">Design Instabil! Adaugă roți.</string>
+</resources>
