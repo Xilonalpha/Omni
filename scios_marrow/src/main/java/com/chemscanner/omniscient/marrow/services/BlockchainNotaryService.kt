@@ -18,7 +18,7 @@ class BlockchainNotaryService @Inject constructor(
 ) {
     private var lastBlockHash: String = "GENESIS_BLOCK_0000000000000000"
     private var merkleRoot: String = ""
-    private val currentBlockTransactions = Collections.synchronizedList(mutableListOf<String>()
+    private val currentBlockTransactions = Collections.synchronizedList(mutableListOf<String>())
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     init {

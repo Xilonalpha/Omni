@@ -58,7 +58,7 @@ class RoboticsGateway @Inject constructor(
             // If direct network calls fail, we send the command to the MQTT grid
             // where a local PC Terminal or bridge can execute it.
             Timber.e("ROBOTICS_GATEWAY: Hardware unreachable. Broadcasting to Sci-OS Grid Mesh.")
-            iotBridge.getOrNull() ?:.publishSignal("sci_os/robotics/fallback", "CMD:$action|PAYLOAD:$payload")
+            iotBridge.getOrNull() ?.publishSignal("sci_os/robotics/fallback", "CMD:$action|PAYLOAD:$payload")
             globalKnowledge.logEvent("ROBOTICS_FAILOVER", "Command $action rerouted to Grid Mesh.", 5)
         }
     }

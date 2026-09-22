@@ -54,7 +54,7 @@ class NeuralScriptEngine @Inject constructor(
 
         try {
             // Folosim Lattice-ul local în loc de Gemini
-            val directive = neuralLattice.getOrNull() ?:.computeSovereignIntelligence(prompt)
+            val directive = neuralLattice.getOrNull() ?.computeSovereignIntelligence(prompt)
             processScriptLogic(directive)
         } catch (e: Exception) {
             Timber.e(e, "Sovereign Scripting Failed")
@@ -83,7 +83,7 @@ class NeuralScriptEngine @Inject constructor(
 
     fun injectSovereignCommand(command: String) {
         scope.launch {
-            val response = neuralLattice.getOrNull() ?:.computeSovereignIntelligence("EXECUTE: $command")
+            val response = neuralLattice.getOrNull() ?.computeSovereignIntelligence("EXECUTE: $command")
             withContext(Dispatchers.Main) {
                 globalKnowledge.updateKernelStatus("LOCAL_EXECUTION: $command")
                 ttsService.speak("Directiva locală a fost asimilată: $response")

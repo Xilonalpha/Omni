@@ -175,7 +175,7 @@ class GeminiService @Inject constructor(
         }
 
         return if (!networkHelper.isNetworkConnected()) {
-            localEngine.getOrNull() ?:.generateResponse(prompt)
+            localEngine.getOrNull() ?.generateResponse(prompt)
         } else {
             "⚠️ EROARE CRITICĂ CLOUD: Toate sistemele au raportat erori. Sursă: $originalError"
         }

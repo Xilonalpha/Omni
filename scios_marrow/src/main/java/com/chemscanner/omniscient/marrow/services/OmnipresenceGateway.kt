@@ -70,7 +70,7 @@ class OmnipresenceGateway @Inject constructor(
             globalKnowledge.logEvent("GATEWAY", "CRITICAL: Spacetime instability detected. Calibrating BCI Neural Link.", 5)
 
             // ACTIVARE BCI: Recalibrare automată în caz de instabilitate a realității
-            bciService.getOrNull() ?:.calibrateNeuralLink("GRAVITY_RESONANCE_STABILIZATION")
+            bciService.getOrNull() ?.calibrateNeuralLink("GRAVITY_RESONANCE_STABILIZATION")
 
             // ACTIVARE IoT: Notificare în mediul fizic (Quantum IoT)
             iotBridge.emitQuantumPulse("REALITY_INTEGRITY_LOW")

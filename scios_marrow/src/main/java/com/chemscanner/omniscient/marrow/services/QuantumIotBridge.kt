@@ -124,7 +124,7 @@ class QuantumIotBridge @Inject constructor(
             val parts = payload.split("|")
             if (parts.size >= 3) {
                 val senderId = parts[1]; val prompt = parts[2]
-                val result = geminiService.getOrNull() ?:.generateContent(prompt, "AKASHA_NODE", 0)
+                val result = geminiService.getOrNull() ?.generateContent(prompt, "AKASHA_NODE", 0)
                 publishSignal(AI_RELAY_RESPONSE, "RES|$senderId|$result")
             }
         }

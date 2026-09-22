@@ -156,7 +156,7 @@ class ShadowMeshService @Inject constructor(
         globalKnowledge.updateWorldMeshStatus("Mesh Active: RoNaQCI Stealth")
         
         globalKnowledge.logEvent("SHADOW_MESH", "RoNaQCI Atomic Stealth Active. Decoys synced with Swarm.", 5)
-        starlinkMesh.getOrNull() ?:.updateMeshStatus(true)
+        starlinkMesh.getOrNull() ?.updateMeshStatus(true)
         startGhostSignalEmission()
     }
 
@@ -168,7 +168,7 @@ class ShadowMeshService @Inject constructor(
                 if (realOrbits.isNotEmpty()) {
                     val decoySat = realOrbits.random()
                     val noisePayload = "PHANTOM_NODULE_${decoySat.name}|POS:${decoySat.latitude},${decoySat.longitude},${decoySat.altitude}|VEL:${decoySat.velocityKms}"
-                    iotBridge.getOrNull() ?:.publishSignal("sci_os/v6/phantom/decoy", broadcastSovereignData(noisePayload, "DECOY_KEY"))
+                    iotBridge.getOrNull() ?.publishSignal("sci_os/v6/phantom/decoy", broadcastSovereignData(noisePayload, "DECOY_KEY"))
                 }
                 delay(15000) 
             }
@@ -178,9 +178,9 @@ class ShadowMeshService @Inject constructor(
     fun sendSovereignMessage(text: String, secret: String, useLiFi: Boolean, useHelios: Boolean) {
         scope.launch {
             val encrypted = broadcastSovereignData(text, secret)
-            iotBridge.getOrNull() ?:.publishSignal("sci_os/v6/phantom/delta", encrypted)
-            if (useLiFi) lifiService.getOrNull() ?:.transmitData(encrypted)
-            if (useHelios) heliosSync.getOrNull() ?:.injectSignalIntoFlux(encrypted)
+            iotBridge.getOrNull() ?.publishSignal("sci_os/v6/phantom/delta", encrypted)
+            if (useLiFi) lifiService.getOrNull() ?.transmitData(encrypted)
+            if (useHelios) heliosSync.getOrNull() ?.injectSignalIntoFlux(encrypted)
         }
     }
 

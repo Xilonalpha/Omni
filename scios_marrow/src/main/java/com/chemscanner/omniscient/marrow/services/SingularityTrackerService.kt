@@ -29,7 +29,7 @@ class SingularityTrackerService @Inject constructor(
     private val confirmedSingularities = Collections.synchronizedList(mutableListOf(
         BlackHoleEvent("Sagittarius A*", 4100000.0, 26673.0, "Galactic Center BH", true, 1.25, "17h 45m 40s", "-29° 00' 28\""),
         BlackHoleEvent("Gaia-BH1", 9.62, 1560.0, "Stellar-Mass BH", false, 1.0, "17h 28m 41s", "-00° 34' 52\"")
-    )
+    ))
 
     fun startTracking() {
         scope.launch {

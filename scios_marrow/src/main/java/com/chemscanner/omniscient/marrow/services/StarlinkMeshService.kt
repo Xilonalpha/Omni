@@ -128,7 +128,7 @@ class StarlinkMeshService @Inject constructor(
 
         if (latestSatelliteEpoch > 0) {
             // Use .get() for lazy resolution
-            shadowMesh.getOrNull() ?:.syncWithAtomicClock(latestSatelliteEpoch)
+            shadowMesh.getOrNull() ?.syncWithAtomicClock(latestSatelliteEpoch)
         }
 
         if (realNodes.isNotEmpty()) {

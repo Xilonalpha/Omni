@@ -26,7 +26,7 @@ class XenoIntelligenceService @Inject constructor(
     private val xilonProf: XilonProfManager
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
-    private val signalHistory = Collections.synchronizedList(mutableListOf<Float>()
+    private val signalHistory = Collections.synchronizedList(mutableListOf<Float>())
     
     companion object {
         private const val MAX_CALIBRATION_SAMPLES = 50 
@@ -38,7 +38,7 @@ class XenoIntelligenceService @Inject constructor(
     private var dynamicBaselineStdDev = 0f
     private var isCalibrating = true
     private var calibrationSamples = 0
-    private val resonanceBuffer = Collections.synchronizedList(mutableListOf<Float>()
+    private val resonanceBuffer = Collections.synchronizedList(mutableListOf<Float>())
 
     init {
         startAnomalousSearch()

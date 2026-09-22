@@ -25,7 +25,7 @@ class PredictiveRealityEngine @Inject constructor(
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private val client = OkHttpClient()
-    private val signalHistory = Collections.synchronizedList(mutableListOf<EnvironmentalSignals>()
+    private val signalHistory = Collections.synchronizedList(mutableListOf<EnvironmentalSignals>())
     
     private val usgsApiUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
 

@@ -161,7 +161,7 @@ class LiFiService @Inject constructor(
         val current = incomingMessageBuffer.toString()
         if (current.contains("RAW_DATA_L1_") && current.endsWith("=")) {
             scope.launch {
-                shadowMesh.getOrNull() ?:.decryptAndHandle(current)
+                shadowMesh.getOrNull() ?.decryptAndHandle(current)
                 incomingMessageBuffer.setLength(0)
             }
         }

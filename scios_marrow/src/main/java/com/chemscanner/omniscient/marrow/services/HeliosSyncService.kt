@@ -92,7 +92,7 @@ class HeliosSyncService @Inject constructor(
                     ttsService.speak("Xilon, recepție prin fluxul fotonic natural.")
                     globalKnowledge.logEvent("HELIOS", "Packet consumed from Galactic Ledger via Light Sync.", 4)
                 }
-                shadowMesh.getOrNull() ?:.decryptAndHandle(encryptedData)
+                shadowMesh.getOrNull() ?.decryptAndHandle(encryptedData)
                 heliosFlux.child(packetKey).removeValue()
             }
         }

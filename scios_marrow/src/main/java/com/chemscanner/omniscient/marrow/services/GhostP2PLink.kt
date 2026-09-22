@@ -50,7 +50,7 @@ class GhostP2PLink @Inject constructor(
      */
     fun relaySovereignData(payload: String) {
         scope.launch {
-            val securedData = shadowMesh.getOrNull() ?:.broadcastSovereignData(payload)
+            val securedData = shadowMesh.getOrNull() ?.broadcastSovereignData(payload)
             globalKnowledge.logEvent("GHOST_MESH", "Data packet injected into local proximity mesh.", 5)
         }
     }

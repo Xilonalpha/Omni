@@ -35,7 +35,7 @@ class RealSignalGateway @Inject constructor(
     private var lightSensor: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
     private var pressureSensor: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE)
 
-    private val emfBuffer = Collections.synchronizedList(mutableListOf<Float>()
+    private val emfBuffer = Collections.synchronizedList(mutableListOf<Float>())
     private val maxBufferSize = 200
     private var lastProcessedHR = 72f
     private var isNearMetal = false

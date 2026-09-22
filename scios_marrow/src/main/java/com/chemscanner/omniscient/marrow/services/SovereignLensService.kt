@@ -36,7 +36,7 @@ class SovereignLensService @Inject constructor(
     }
 
     private var isTelescopeActive = false
-    private val activeSatellites = Collections.synchronizedList(mutableListOf<SatellitePos>()
+    private val activeSatellites = Collections.synchronizedList(mutableListOf<SatellitePos>())
 
     data class SatellitePos(
         val name: String, 
