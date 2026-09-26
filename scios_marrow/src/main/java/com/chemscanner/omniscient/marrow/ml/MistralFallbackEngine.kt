@@ -1,5 +1,6 @@
 package com.chemscanner.omniscient.marrow.ml
 
+import com.chemscanner.omniscient.marrow.config.ApiKeyProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
@@ -20,8 +21,7 @@ import javax.inject.Singleton
  */
 @Singleton
 class MistralFallbackEngine @Inject constructor(
-    private val okHttpClient: OkHttpClient,
-    private val apiKeyProvider: ApiKeyProvider
+    private val okHttpClient: OkHttpClient
 ) {
     
     private val ollamaLocalUrl = "http://localhost:11434/api/generate"
@@ -71,7 +71,7 @@ class MistralFallbackEngine @Inject constructor(
         prompt: String,
         maxTokens: Int = 512
     ): String? = withContext(Dispatchers.IO) {
-        val apiKey = apiKeyProvider.getMistralApiKey()
+        val apiKey = ApiKeyProvider.getMistralApiKey()
         if (apiKey.isEmpty()) {
             Timber.w("MISTRAL_API: No API key configured")
             return@withContext null
